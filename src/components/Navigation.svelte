@@ -4,16 +4,31 @@
 	function toggle() {
 		mobileNav.isOpen = !mobileNav.isOpen;
 	}
+
+	let routes = 
+	[
+		{ href: '/', title: 'Home' },
+		{ href: '/v1', title: 'V1' },
+		{ href: '/blog', title: 'Blog' }
+	];
+
+	import { page } from '$app/stores';
+
 </script>
+
 
 <nav class="flex justify-between p-8">
 
 	<span class="text-2xl">MyFirstApp</span>
 
 	<div class="hidden justify-end md:block">
-		<span class="text-xl p-4">Home</span>
-		<span class="text-xl p-4">Link 1</span>
-		<span class="text-xl p-4">Link 2</span>
+	{#each routes as { href, title }, i}
+	<span class="text-xl p-4 decoration-4 decoration-slate-400 hover:underline underline-offset-2 {$page.url.pathname === href ? "underline" : ""}">
+			<a href="{href}">
+			{title}
+		</a>
+	</span>
+	{/each}
 	</div>
 
 	<div class="flex md:hidden" on:click={toggle}>
@@ -24,12 +39,15 @@
 		</button>
 	</div>
 
-
 </nav>
 {#if mobileNav.isOpen}
-<div class="flex flex-col lg:hidden text-right pr-8">
-	<span class="text-xl pb-4">Home</span>
-	<span class="text-xl pb-4">Link 1</span>
-	<span class="text-xl pb-4">Link 2</span>
+<div class="flex flex-col md:hidden text-right p-8">
+	{#each routes as { href, title }, i}
+		<span on:click={toggle} class="text-xl font-bold py-4 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0">
+			<a class="w-full" href="{href}">
+				{title}
+			</a>
+		</span>
+	{/each}
 </div>
 {/if}
