@@ -1,23 +1,19 @@
 <script>
 	import { page } from '$app/stores';
+	import { NAVIGATION_ELEMENTS } from '../constants/navigationElements';
+
 	let mobileNav = { isOpen: false };
 
 	function toggle() {
 		mobileNav.isOpen = !mobileNav.isOpen;
 	}
-
-	let routes = [
-		{ href: '/', title: 'Home' },
-		{ href: '/v1', title: 'V1' },
-		{ href: '/blog', title: 'Blog' }
-	];
 </script>
 
 <nav class="flex justify-between p-8 bg-white">
 	<a href="/" class="text-2xl">MyFirstApp</a>
 
 	<div class="hidden justify-end md:block">
-		{#each routes as { href, title }, i}
+		{#each NAVIGATION_ELEMENTS as { href, title }, i}
 			<span
 				class="text-xl p-4 decoration-4 decoration-slate-500 hover:underline underline-offset-4 {$page
 					.url.pathname === href
@@ -48,7 +44,7 @@
 </nav>
 {#if mobileNav.isOpen}
 	<div class="flex flex-col md:hidden text-right p-8">
-		{#each routes as { href, title }, i}
+		{#each NAVIGATION_ELEMENTS as { href, title }, i}
 			<span
 				on:click={toggle}
 				class="text-xl font-bold py-4 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0"
