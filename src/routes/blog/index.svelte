@@ -1,2 +1,1 @@
-<h1>Blog</h1>
-<p>Testphrase</p>
+<h1 class="text-xl">Blog</h1>

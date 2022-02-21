@@ -1,67 +1,61 @@
 <script>
-  let cards = 
-	[
-		{ headline: 'Headline', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ratione sed cumque molestiae dolores eaque odit corporis accusamus reprehenderit laborum?' },
-		{ headline: 'Headline', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ratione sed cumque molestiae dolores eaque odit corporis accusamus reprehenderit laborum?' },
-		{ headline: 'Headline', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ratione sed cumque molestiae dolores eaque odit corporis accusamus reprehenderit laborum?' },
-		{ headline: 'Headline', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ratione sed cumque molestiae dolores eaque odit corporis accusamus reprehenderit laborum?' },
+	let cards = [
+		{ headline: 'Headline', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+		{ headline: 'Headline', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+		{ headline: 'Headline', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+		{ headline: 'Headline', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' }
 	];
 </script>
 
-
 <section class="bg-gray-50">
-  <div class="max-w-screen-xl px-4 py-16 mx-auto space-y-8 sm:px-6 lg:px-8">
-    <div class="max-w-lg mx-auto text-center">
-      
-      <h2 class="text-3xl font-bold text-black sm:text-4xl">
-        Lorem ipsum dolor sit amet.
-      </h2>
+	<div class="max-w-screen-xl px-4 py-16 mx-auto space-y-8 sm:px-6 lg:px-8">
+		<div class="max-w-lg mx-auto text-center">
+			<h2 class="text-3xl font-bold text-black sm:text-4xl">Lorem ipsum dolor sit amet.</h2>
 
-      <p class="mt-4 text-black-300">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ratione sed cumque molestiae dolores eaque
-        odit corporis accusamus reprehenderit laborum?
-      </p>
-    </div>
+			<p class="mt-4 text-black-300">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ratione sed cumque
+				molestiae dolores eaque odit corporis accusamus reprehenderit laborum?
+			</p>
+		</div>
 
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+		<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+			{#each cards as { headline, text }, i}
+				<a class="block p-8 border border-gray-300 shadow-xl rounded-xl" href="/">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="w-10 h-10 text-blue-400"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path d="M12 14l9-5-9-5-9 5 9 5z" />
+						<path
+							d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+						/>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+						/>
+					</svg>
 
-      {#each cards as { headline, text }, i}
+					<h3 class="mt-3 text-xl font-bold text-black">{headline}</h3>
 
-      <a class="block p-8 border border-gray-300 shadow-xl rounded-xl" href="/">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-10 h-10 text-blue-400"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path d="M12 14l9-5-9-5-9 5 9 5z" />
-          <path
-            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-          />
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-          />
-        </svg>
+					<p class="mt-4 text-sm text-black-300">
+						{text}
+					</p>
+				</a>
+			{/each}
+		</div>
 
-        <h3 class="mt-3 text-xl font-bold text-black">{headline}</h3>
-
-        <p class="mt-4 text-sm text-black-300">
-         {text}
-        </p>
-      </a>
-
-      {/each}
-
-    </div>
-
-    <div class="text-center">
-      <a class="inline-block px-5 py-3 text-sm font-medium text-white bg-blue-500 rounded-lg" href="/">
-        Find out more
-      </a>
-    </div>
-  </div>
+		<div class="text-center">
+			<a
+				class="inline-block px-5 py-3 text-sm font-medium text-white bg-blue-500 rounded-lg"
+				href="/"
+			>
+				Find out more
+			</a>
+		</div>
+	</div>
 </section>

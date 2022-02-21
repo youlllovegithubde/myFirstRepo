@@ -5,15 +5,19 @@
 	import Footer from '../components/Footer.svelte';
 </script>
 
-<div class="mx-auto max-w-6xl xl:w-8/12 lg:w-10/12">
+<div class="mx-auto max-w-6xl xl:w-7/12 lg:w-10/12">
 	<div class="flex flex-col min-h-screen">
 		<header>
-			<Navigation/>
+			<Navigation />
 		</header>
 		<main class="flex flex-grow">
-			<slot/>
-			<Sidebar/>
+			<div class="p-8 md:w-2/3">
+				<slot />
+			</div>
+			<div class="hidden md:block p-8 w-1/3">
+				<Sidebar />
+			</div>
 		</main>
-		<Footer/>
+		<Footer />
 	</div>
 </div>
