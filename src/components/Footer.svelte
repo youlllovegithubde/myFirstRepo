@@ -13,6 +13,13 @@
         <div class="">Link 1</div>
         <div class="">Link 2</div>
         <div class="">Link 3</div>
+    </div>
+
+    <div class="pb-8">
+        <div class="text-lg">Main 1</div>
+        <div class="">Link 1</div>
+        <div class="">Link 2</div>
+        <div class="">Link 3</div>
     </div> 
   
 </footer>

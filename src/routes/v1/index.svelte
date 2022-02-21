@@ -27,7 +27,7 @@
 
       {#each cards as { headline, text }, i}
 
-      <a class="block p-8 border border-gray-300 shadow-xl rounded-xl" href="">
+      <a class="block p-8 border border-gray-300 shadow-xl rounded-xl" href="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="w-10 h-10 text-blue-400"
@@ -59,7 +59,7 @@
     </div>
 
     <div class="text-center">
-      <a class="inline-block px-5 py-3 text-sm font-medium text-white bg-blue-500 rounded-lg" href="">
+      <a class="inline-block px-5 py-3 text-sm font-medium text-white bg-blue-500 rounded-lg" href="/">
         Find out more
       </a>
     </div>

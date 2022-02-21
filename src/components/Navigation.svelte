@@ -17,7 +17,7 @@
 </script>
 
 
-<nav class="flex justify-between p-8">
+<nav class="flex justify-between p-8 bg-white">
 
 	<span class="text-2xl">MyFirstApp</span>
 
