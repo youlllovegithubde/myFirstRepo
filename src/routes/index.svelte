@@ -6,21 +6,19 @@
 	<title>MyFirstApp</title>
 </svelte:head>
 
-<h1 class="text-xl pb-4">Content</h1>
-
-<h2
-	class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-8"
+<h1
+	class="break-all text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-8"
 >
-	Wer weiß denn sowas Dummes?
-</h2>
+	<p class="break-inside-auto">Erfahrungsbericht:</p>
+	 Wuxal Super 8-8-6
+</h1>
 
 <Button title="Primary" />
-<Button title="Secondary" type="secondary"/>
-<Button title="v2" type="v2"/>
-<Button title="v3" type="v3"/>
-<Button title="v4" type="v4"/>
-<Button title="v5" type="v5"/>
-
+<Button title="Secondary" type="secondary" />
+<Button title="v2" type="v2" />
+<Button title="v3" type="v3" />
+<Button title="v4" type="v4" />
+<Button title="v5" type="v5" />
 
 <p>
 	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut

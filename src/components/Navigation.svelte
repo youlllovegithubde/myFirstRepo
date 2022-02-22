@@ -9,18 +9,19 @@
 	}
 </script>
 
-<nav class="flex justify-between p-8 bg-white">
+<nav class="bg-white flex justify-between m-8">
 	<a href="/" class="text-2xl">MyFirstApp</a>
 
-	<div class="hidden justify-end md:block">
+	<div class="hidden md:flex">
 		{#each NAVIGATION_ELEMENTS as { href, title }, i}
-			<span
-				class="text-xl p-4 decoration-4 decoration-slate-500 hover:underline underline-offset-4 {$page
-					.url.pathname === href
-					? 'underline decoration-slate-700 font-semibold'
-					: ''}"
-			>
-				<a {href}>
+			<span>
+				<a
+					{href}
+					class="text-slate-500 ml-8 text-xl decoration-4 hover:underline hover:decoration-slate-300 underline-offset-4 {$page
+						.url.pathname === href
+						? 'text-slate-900 underline decoration-slate-500 hover:decoration-slate-500'
+						: ''}"
+				>
 					{title}
 				</a>
 			</span>

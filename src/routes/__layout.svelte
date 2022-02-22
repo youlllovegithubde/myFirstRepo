@@ -11,10 +11,10 @@
 			<Navigation />
 		</header>
 		<main class="flex flex-grow">
-			<div class="p-8 md:w-2/3">
+			<div class="md:w-2/3 p-8">
 				<slot />
 			</div>
-			<div class="hidden md:block p-8 w-1/3">
+			<div class="hidden md:block w-1/3 p-8">
 				<Sidebar />
 			</div>
 		</main>
