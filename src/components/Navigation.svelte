@@ -17,7 +17,7 @@
 			<span
 				class="text-xl p-4 decoration-4 decoration-slate-500 hover:underline underline-offset-4 {$page
 					.url.pathname === href
-					? 'underline decoration-slate-700'
+					? 'underline decoration-slate-700 font-semibold'
 					: ''}"
 			>
 				<a {href}>
